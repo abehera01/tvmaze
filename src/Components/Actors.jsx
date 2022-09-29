@@ -24,7 +24,6 @@ function Actor() {
   useEffect(() => {
     getActorsData();
   }, [inputVal]);
-  // console.log(actorsData);
   return (
     <>
       <section className="mt-5">
