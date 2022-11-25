@@ -7,10 +7,8 @@ function Actor() {
   let dataUrl = "";
   if (inputVal.length > 0) {
     dataUrl = `https://api.tvmaze.com/search/people?q=${inputVal}`;
-  } 
-  // else {
-  //   dataUrl = `https://api.tvmaze.com/search/people?q=friends`;
-  // }
+  }
+
 
   const getActorsData = async () => {
     try {
@@ -18,12 +16,14 @@ function Actor() {
       let resData = await respone.json();
       setActorsData(resData);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
+
   useEffect(() => {
     getActorsData();
-  }, [inputVal]);
+  });
+
   return (
     <>
       <section className="mt-5">
@@ -76,7 +76,6 @@ function Actor() {
                         className="card-text overflow-hidden"
                         style={{ height: "90px" }}
                       >
-                        lored sdfhsadfh fsdhhasff hsfdih
                       </p>
                     </div>
                     <h5 className="text-danger text-center">

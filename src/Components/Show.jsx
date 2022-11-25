@@ -9,10 +9,6 @@ function Actor() {
         dataUrl = `https://api.tvmaze.com/search/shows?q=${inputVal}`;
     } 
     
-    // else {
-    //     dataUrl = `https://api.tvmaze.com/search/shows?q=friends`;
-    // }
-
     const getshowData = async () => {
         try {
             let respone = await fetch(dataUrl);
@@ -25,7 +21,6 @@ function Actor() {
     useEffect(() => {
         getshowData();
     }, [inputVal]);
-    // console.log(showData);
     return (
         <>
             <section className="mt-5">
@@ -82,12 +77,6 @@ function Actor() {
                                   )}
                                   </a>
                                   <div className="card-body">
-                                    {/* <p
-                                      className="card-text overflow-hidden"
-                                      style={{ height: "90px" }}
-                                    >
-                                      {element.show.summary}
-                                    </p> */}
                                     <span>
                                       <i
                                         class="fa fa-star text-success"
